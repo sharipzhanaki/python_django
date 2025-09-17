@@ -1,0 +1,39 @@
+{% extends 'requestdataapp/base.html' %}
+
+{% block title %}
+  File upload
+{% endblock %}
+
+{% block body %}
+  <h1>Upload file</h1>
+
+  {% if error %}
+    <p style="color: red;">{{ error }}</p>
+  {% endif %}
+
+  {% if success %}
+    <p style="color: green;">{{ success }}</p>
+    <p>Filename: {{ filename }}</p>
+    <p>Size: {{ filesize }} KB</p>
+  {% endif %}
+
+  <form id="uploadForm" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>
+      <input type="file" id="fileInput" name="myfile">
+    </p>
+
+    <button type="submit">Upload</button>
+  </form>
+
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', function (event) {
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+
+      if (file && file.size > 1 * 1024 * 1024) {
+        alert ('Error: file exceeds the allowed size of 1 MB!');
+      }
+    });
+  </script>
+{% endblock %}

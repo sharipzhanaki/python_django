@@ -1,0 +1,10 @@
+{% extends 'requestdataapp/base.html' %}
+
+{% block title %}
+  Too many requests
+{% endblock %}
+
+{% block body %}
+  <h1 style="color: red;">Too many requests</h1>
+  <p>Please wait {{ wait_time }} seconds before next request and try again.</p>
+{% endblock %}

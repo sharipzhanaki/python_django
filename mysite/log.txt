@@ -1,0 +1,1033 @@
+2025-09-04 09:58:37,451 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-04 09:58:42,773 [WARNING] django.request: Not Found: /
+2025-09-04 09:58:46,976 [WARNING] django.request: Not Found: /
+2025-09-04 09:58:51,165 [INFO] shopapp.views: Rendering shop index
+2025-09-04 09:59:03,511 [INFO] shopapp.views: Rendering shop index
+2025-09-04 09:59:04,121 [INFO] shopapp.views: Rendering shop index
+2025-09-04 09:59:04,735 [INFO] shopapp.views: Rendering shop index
+2025-09-04 10:11:45,651 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-04 10:13:08,905 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2025-09-04 10:13:11,227 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-04 10:15:43,589 [INFO] shopapp.views: Rendering shop index
+2025-09-04 15:20:00,740 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-04 15:20:13,988 [WARNING] django.request: Not Found: /
+2025-09-04 15:20:20,727 [WARNING] django.request: Not Found: /shop/products/export
+2025-09-04 15:20:21,809 [WARNING] django.request: Not Found: /apple-touch-icon-precomposed.png
+2025-09-04 15:20:21,955 [WARNING] django.request: Not Found: /apple-touch-icon.png
+2025-09-04 15:24:47,666 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2025-09-04 15:24:52,610 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-04 15:24:56,247 [WARNING] django.request: Not Found: /shop/products/export
+2025-09-04 15:24:57,612 [WARNING] django.request: Not Found: /shop/products/export
+2025-09-04 15:25:57,625 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2025-09-05 09:57:49,440 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 10:14:27,069 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 10:14:40,584 [WARNING] django.request: Not Found: /
+2025-09-05 10:14:42,163 [WARNING] django.request: Not Found: /
+2025-09-05 11:07:17,962 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2025-09-05 11:07:21,191 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 11:12:38,163 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2025-09-05 11:12:42,058 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 11:19:04,319 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2025-09-05 11:19:07,323 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 11:20:04,661 [ERROR] django.request: Internal Server Error: /ru/admin/shopapp/product/import-products-csv/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1741, in to_python
+    decimal_value = decimal.Decimal(value)
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/admin.py", line 97, in import_csv
+    Product.objects.bulk_create(products)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 803, in bulk_create
+    returned_columns = self._batched_insert(
+        objs_without_pk,
+    ...<4 lines>...
+        unique_fields=unique_fields,
+    )
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1831, in _batched_insert
+    self._insert(
+    ~~~~~~~~~~~~^
+        item,
+        ^^^^^
+    ...<2 lines>...
+        returning_fields=self.model._meta.db_returning_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+                       ~~~~~~~~~~~^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1760, in get_db_prep_save
+    self.to_python(value), self.max_digits, self.decimal_places
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1743, in to_python
+    raise exceptions.ValidationError(
+    ...<3 lines>...
+    )
+django.core.exceptions.ValidationError: ['Значение “ "2999.00"” должно быть десятичным числом.']
+2025-09-05 11:20:26,164 [ERROR] django.request: Internal Server Error: /ru/admin/shopapp/product/import-products-csv/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1741, in to_python
+    decimal_value = decimal.Decimal(value)
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/admin.py", line 97, in import_csv
+    Product.objects.bulk_create(products)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 803, in bulk_create
+    returned_columns = self._batched_insert(
+        objs_without_pk,
+    ...<4 lines>...
+        unique_fields=unique_fields,
+    )
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1831, in _batched_insert
+    self._insert(
+    ~~~~~~~~~~~~^
+        item,
+        ^^^^^
+    ...<2 lines>...
+        returning_fields=self.model._meta.db_returning_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+                       ~~~~~~~~~~~^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1760, in get_db_prep_save
+    self.to_python(value), self.max_digits, self.decimal_places
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1743, in to_python
+    raise exceptions.ValidationError(
+    ...<3 lines>...
+    )
+django.core.exceptions.ValidationError: ['Значение “ "2999"” должно быть десятичным числом.']
+2025-09-05 11:20:55,422 [ERROR] django.request: Internal Server Error: /ru/admin/shopapp/product/import-products-csv/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1741, in to_python
+    decimal_value = decimal.Decimal(value)
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/admin.py", line 97, in import_csv
+    Product.objects.bulk_create(products)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 803, in bulk_create
+    returned_columns = self._batched_insert(
+        objs_without_pk,
+    ...<4 lines>...
+        unique_fields=unique_fields,
+    )
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1831, in _batched_insert
+    self._insert(
+    ~~~~~~~~~~~~^
+        item,
+        ^^^^^
+    ...<2 lines>...
+        returning_fields=self.model._meta.db_returning_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+                       ~~~~~~~~~~~^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1747, in as_sql
+    self.prepare_value(field, self.pre_save_val(field, obj))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1760, in get_db_prep_save
+    self.to_python(value), self.max_digits, self.decimal_places
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1743, in to_python
+    raise exceptions.ValidationError(
+    ...<3 lines>...
+    )
+django.core.exceptions.ValidationError: ['Значение “ "2999"” должно быть десятичным числом.']
+2025-09-05 12:20:19,010 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 12:20:37,108 [WARNING] django.request: Not Found: /
+2025-09-05 12:31:39,088 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2025-09-05 12:31:42,223 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 12:34:06,920 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2025-09-05 12:34:09,410 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 12:41:02,886 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py changed, reloading.
+2025-09-05 12:41:09,736 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 12:41:29,314 [WARNING] django.request: Method Not Allowed: /ru/shop/api/products/upload_csv/
+2025-09-05 12:43:06,296 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py changed, reloading.
+2025-09-05 12:43:08,508 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 12:45:18,650 [WARNING] django.request: Method Not Allowed: /ru/shop/api/products/upload_csv/
+2025-09-05 13:56:48,567 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 14:01:05,222 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/blogapp/admin.py changed, reloading.
+2025-09-05 14:01:12,114 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 14:01:42,503 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/blogapp/admin.py changed, reloading.
+2025-09-05 14:02:43,894 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 14:04:06,482 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 16:46:20,422 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 17:29:23,819 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-05 17:29:45,000 [WARNING] django.request: Not Found: /
+2025-09-05 17:29:47,047 [WARNING] django.request: Not Found: /
+2025-09-05 17:37:08,065 [ERROR] django.request: Internal Server Error: /blog/articles/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article-list' with keyword arguments '{'pk': 2}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2025-09-05 17:37:40,358 [ERROR] django.request: Internal Server Error: /blog/articles/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article-list' with keyword arguments '{'pk': 2}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2025-09-05 17:38:20,815 [WARNING] django.request: Not Found: /
+2025-09-05 17:38:23,117 [ERROR] django.request: Internal Server Error: /blog/articles/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'article-list' with keyword arguments '{'pk': 2}' not found. 1 pattern(s) tried: ['blog/articles/\\Z']
+2025-09-05 17:53:22,564 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/blogapp/views.py changed, reloading.
+2025-09-05 17:53:25,096 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 12:16:01,774 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 12:17:37,942 [WARNING] django.request: Not Found: /
+2025-09-07 12:19:21,422 [WARNING] django.request: Not Found: /blog/articles/latest
+2025-09-07 13:00:01,844 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 13:00:17,046 [WARNING] django.request: Not Found: /
+2025-09-07 13:00:24,285 [ERROR] django.request: Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ~~~~~~~~~~~~~~^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 132, in location
+    return item.get_absolute_url()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/blogapp/models.py", line 27, in get_absolute_url
+    return reverse("blogapp:article-detail", kwargs={"pk", self.pk})
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: django.urls.resolvers.URLResolver._reverse_with_prefix() argument after ** must be a mapping, not set
+2025-09-07 13:01:12,158 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2025-09-07 13:01:14,406 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 13:01:20,412 [ERROR] django.request: Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ~~~~~~~~~~~~~~^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 132, in location
+    return item.get_absolute_url()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/blogapp/models.py", line 27, in get_absolute_url
+    return reverse("blogapp:article-detail", kwargs={"pk", self.pk})
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: django.urls.resolvers.URLResolver._reverse_with_prefix() argument after ** must be a mapping, not set
+2025-09-07 13:05:08,430 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/blogapp/sitemap.py changed, reloading.
+2025-09-07 13:05:11,912 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 13:05:30,472 [ERROR] django.request: Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ~~~~~~~~~~~~~~^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/contrib/sitemaps/__init__.py", line 132, in location
+    return item.get_absolute_url()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/blogapp/models.py", line 27, in get_absolute_url
+    return reverse("blogapp:article-detail", kwargs={"pk", self.pk})
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: django.urls.resolvers.URLResolver._reverse_with_prefix() argument after ** must be a mapping, not set
+2025-09-07 13:10:01,867 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/blogapp/models.py changed, reloading.
+2025-09-07 13:10:04,429 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 15:09:58,729 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 15:35:17,007 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 15:35:21,347 [WARNING] django.request: Not Found: /
+2025-09-07 15:35:25,353 [WARNING] django.request: Not Found: /
+2025-09-07 15:35:32,693 [WARNING] django.request: Not Found: /
+2025-09-07 15:48:40,945 [WARNING] django.request: Not Found: /
+2025-09-07 15:50:25,471 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 15:51:04,377 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/sitemap.py changed, reloading.
+2025-09-07 15:51:06,171 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 15:51:20,314 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/sitemap.py changed, reloading.
+2025-09-07 15:51:21,962 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 15:51:37,581 [WARNING] django.request: Not Found: /
+2025-09-07 15:51:41,835 [WARNING] django.request: Not Found: /
+2025-09-07 15:51:49,361 [ERROR] django.request: Internal Server Error: /ru/admin/shopapp/order/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: admin/shopapp/orders_changelist.html
+2025-09-07 15:53:13,574 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2025-09-07 15:53:15,865 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-07 16:09:47,153 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2025-09-07 16:09:49,433 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:14:02,911 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:16:32,025 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2025-09-08 11:16:33,555 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:17:20,198 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2025-09-08 11:17:21,747 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:17:53,848 [WARNING] django.request: Not Found: /
+2025-09-08 11:20:49,091 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2025-09-08 11:20:51,316 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:22:59,790 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2025-09-08 11:23:02,421 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:23:28,950 [WARNING] django.request: Not Found: /
+2025-09-08 11:23:37,485 [WARNING] django.request: Not Found: /accounts/cookie-get
+2025-09-08 11:23:59,144 [WARNING] django.request: Not Found: /accounts/
+2025-09-08 11:25:43,585 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2025-09-08 11:25:46,786 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:27:56,420 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2025-09-08 11:27:58,183 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:28:21,346 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2025-09-08 11:28:22,786 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:32:01,852 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py changed, reloading.
+2025-09-08 11:32:04,767 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:33:51,426 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py changed, reloading.
+2025-09-08 11:33:53,693 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:34:14,783 [ERROR] django.request: Internal Server Error: /ru/shop/api/products/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py", line 50, in list
+    return super().list(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: ListModelMixin.list() missing 1 required positional argument: 'request'
+2025-09-08 11:34:27,127 [WARNING] django.request: Not Found: /rshop/api/products/
+2025-09-08 11:34:47,249 [WARNING] django.request: Not Found: /
+2025-09-08 11:34:50,501 [WARNING] django.request: Not Found: /
+2025-09-08 11:34:56,107 [ERROR] django.request: Internal Server Error: /ru/shop/api/products/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py", line 50, in list
+    return super().list(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: ListModelMixin.list() missing 1 required positional argument: 'request'
+2025-09-08 11:35:25,192 [ERROR] django.request: Internal Server Error: /ru/shop/api/products/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py", line 50, in list
+    return super().list(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: ListModelMixin.list() missing 1 required positional argument: 'request'
+2025-09-08 11:42:28,388 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py changed, reloading.
+2025-09-08 11:42:30,164 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:42:36,835 [ERROR] django.request: Internal Server Error: /ru/shop/api/products/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py", line 61, in list
+    return super().list(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: ListModelMixin.list() missing 1 required positional argument: 'request'
+2025-09-08 11:42:56,799 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py changed, reloading.
+2025-09-08 11:42:58,924 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:42:59,933 [ERROR] django.request: Internal Server Error: /ru/shop/api/products/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py", line 61, in list
+    return super().list(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: ListModelMixin.list() missing 1 required positional argument: 'request'
+2025-09-08 11:56:32,165 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py changed, reloading.
+2025-09-08 11:58:14,354 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 11:59:27,064 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/api.py changed, reloading.
+2025-09-08 11:59:29,626 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 12:01:27,912 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+2025-09-08 12:20:47,913 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 12:22:43,888 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 12:54:29,044 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 12:54:47,082 [WARNING] django.request: Not Found: /
+2025-09-08 14:52:13,962 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 14:52:24,685 [WARNING] django.request: Not Found: /
+2025-09-08 14:52:27,116 [WARNING] django.request: Not Found: /
+2025-09-08 14:52:37,038 [ERROR] django.request: Internal Server Error: /ru/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'owner'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ~~~~~~~^
+        type(current), bit
+        ^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+AttributeError: type object 'RequestContext' has no attribute 'owner'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'owner'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 736, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [owner] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': None, 'page_obj': None, 'is_paginated': False, 'object_list': <QuerySet [<Order: Order object (2)>, <Order: Order object (3)>, <Order: Order object (6)>, <Order: Order object (7)>, <Order: Order object (8)>, <Order: Order object (9)>, <Order: Order object (10)>]>, 'orders': <QuerySet [<Order: Order object (2)>, <Order: Order object (3)>, <Order: Order object (6)>, <Order: Order object (7)>, <Order: Order object (8)>, <Order: Order object (9)>, <Order: Order object (10)>]>, 'view': <shopapp.views.UserOrdersListView object at 0x108719400>}]
+2025-09-08 14:56:01,839 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2025-09-08 14:56:54,456 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 14:56:58,296 [ERROR] django.request: Internal Server Error: /ru/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'owner'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ~~~~~~~^
+        type(current), bit
+        ^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+AttributeError: type object 'RequestContext' has no attribute 'owner'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'owner'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 736, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [owner] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': None, 'page_obj': None, 'is_paginated': False, 'object_list': <QuerySet [<Order: Order object (2)>, <Order: Order object (3)>, <Order: Order object (6)>, <Order: Order object (7)>, <Order: Order object (8)>, <Order: Order object (9)>, <Order: Order object (10)>]>, 'orders': <QuerySet [<Order: Order object (2)>, <Order: Order object (3)>, <Order: Order object (6)>, <Order: Order object (7)>, <Order: Order object (8)>, <Order: Order object (9)>, <Order: Order object (10)>]>, 'view': <shopapp.views.UserOrdersListView object at 0x10e5896a0>}]
+2025-09-08 14:57:03,574 [ERROR] django.request: Internal Server Error: /ru/shop/users/2/orders/
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'owner'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ~~~~~~~^
+        type(current), bit
+        ^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+AttributeError: type object 'RequestContext' has no attribute 'owner'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'owner'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 736, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/Users/aknursaripzan/PycharmProjects/python_django/.venv/lib/python3.13/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [owner] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': None, 'page_obj': None, 'is_paginated': False, 'object_list': <QuerySet [<Order: Order object (5)>, <Order: Order object (11)>]>, 'orders': <QuerySet [<Order: Order object (5)>, <Order: Order object (11)>]>, 'view': <shopapp.views.UserOrdersListView object at 0x10ea39e50>}]
+2025-09-08 14:57:34,895 [INFO] django.utils.autoreload: /Users/aknursaripzan/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2025-09-08 14:57:36,468 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 15:14:09,524 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2025-09-08 15:14:19,862 [WARNING] django.request: Not Found: /
+2025-09-08 15:14:20,599 [WARNING] django.request: Not Found: /
+2025-09-08 15:14:25,634 [WARNING] django.request: Not Found: /
+2025-09-08 15:14:35,419 [WARNING] django.request: Not Found: /users/1/orders/export
+2025-09-08 15:15:37,406 [WARNING] django.request: Not Found: /ru/shop/users/6/orders/export/
